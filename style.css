@@ -1,0 +1,230 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f5f7fa;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* Navigation Menu (Styled with Tailwind and Custom CSS) */
+.menu {
+    @apply fixed top-4 left-1/2 transform -translate-x-1/2 flex rounded-md;
+    background-image: linear-gradient(rgb(48, 48, 48) 13%, rgb(30, 30, 30) 40%, #0c0d11 86%);
+    color: rgba(255, 255, 255, 0.6);
+    text-shadow: 0 -2px 0 black;
+    box-shadow: 1px 2px 4px rgb(20, 20, 20), 0 4px 12px rgb(10, 10, 10);
+    z-index: 1000;
+}
+
+.nav-item {
+    @apply flex flex-row-reverse items-center justify-between min-w-[120px] text-sm leading-4 transition-all duration-75;
+}
+
+.nav-item.active {
+    color: hsl(260, 100%, 80%);
+    text-shadow: 0 0 3px hsla(260, 100%, 70%, 0.7);
+}
+
+.nav-item:not(.active):hover {
+    color: rgba(255, 255, 255, 0.87);
+}
+
+.nav-item:not(:first-of-type) {
+    border-left: 1px solid rgb(60, 60, 60);
+}
+
+.nav-item:not(:last-of-type) {
+    border-right: 0.1rem solid black;
+}
+
+.nav-item a {
+    @apply text-inherit no-underline px-2;
+}
+
+.nav-item .icon {
+    @apply p-2 relative;
+}
+
+.nav-item .icon .subicon {
+    @apply absolute -top-1 -right-1 bg-red-500 text-white shadow-md w-5 h-5 rounded-full text-xs font-bold grid place-items-center border-2 transition-all duration-100;
+    text-shadow: none;
+    border-color: mix(white, red);
+}
+
+.nav-item:hover .icon .subicon {
+    @apply h-8 w-8 rounded-full -top-4 -right-4 border-white;
+}
+
+.nav-item .icon svg {
+    @apply max-w-[16px];
+}
+
+/* Hero Section */
+.hero-section {
+    @apply h-screen w-full flex justify-center items-center text-center text-white;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+}
+
+.hero-content {
+    @apply max-w-2xl;
+}
+
+.hero-content h1 {
+    @apply text-5xl mb-4;
+}
+
+.hero-content p {
+    @apply text-lg mb-8;
+}
+
+.cta-button {
+    @apply inline-block px-8 py-4 bg-red-500 text-white no-underline rounded-full font-medium transition-all duration-300;
+}
+
+.cta-button:hover {
+    @apply bg-red-600 scale-105;
+}
+
+.animate-text {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+.animate-text:nth-child(1) { animation-delay: 0.5s; }
+.animate-text:nth-child(2) { animation-delay: 1s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* General Section Styling */
+.section {
+    @apply w-full p-16 min-h-[80vh] flex flex-col items-center;
+}
+
+.section:nth-child(even) {
+    @apply bg-gray-100;
+}
+
+.section h2 {
+    @apply text-4xl mb-12 text-gray-800;
+}
+
+/* About Section */
+.about-content {
+    @apply max-w-2xl text-center;
+}
+
+.about-content p {
+    @apply text-lg leading-8 mb-4;
+}
+
+/* Projects Section */
+.projects-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-6xl;
+}
+
+.project-card {
+    @apply bg-white p-6 rounded-lg shadow-lg transition-all duration-300;
+}
+
+.project-card:hover {
+    @apply translate-y-[-10px] shadow-xl;
+}
+
+.project-placeholder {
+    @apply w-full h-48 bg-gray-200 rounded mb-4;
+}
+
+.project-card h3 {
+    @apply text-xl mb-2;
+}
+
+.project-card p {
+    @apply text-sm text-gray-600;
+}
+
+/* Resume Section */
+.resume-content {
+    @apply max-w-2xl text-left;
+}
+
+.resume-content ul {
+    @apply list-none p-0;
+}
+
+.resume-content li {
+    @apply mb-4 text-lg;
+}
+
+#download-cv {
+    @apply px-8 py-3 text-base bg-red-500 text-white border-none rounded-full cursor-pointer transition-all duration-300;
+}
+
+#download-cv:hover {
+    @apply bg-red-600 scale-105;
+}
+
+/* Contact Section */
+.contact-container {
+    @apply flex w-full max-w-4xl gap-12 flex-wrap;
+}
+
+.contact-info, .contact-form {
+    @apply flex-1 min-w-[300px];
+}
+
+.contact-info h3 {
+    @apply text-2xl mb-4;
+}
+
+.contact-info p {
+    @apply text-base mb-2;
+}
+
+.contact-form form {
+    @apply flex flex-col gap-4;
+}
+
+.contact-form input, .contact-form textarea {
+    @apply p-4 border border-gray-300 rounded text-base font-poppins;
+}
+
+.contact-form textarea {
+    @apply h-40 resize-none;
+}
+
+.contact-form button {
+    @apply p-4 bg-red-500 text-white border-none rounded-full cursor-pointer transition-all duration-300;
+}
+
+.contact-form button:hover {
+    @apply bg-red-600 scale-105;
+}
+
+/* Footer */
+footer {
+    @apply bg-gray-800 text-white p-8 w-full text-center;
+}
+
+.footer-content {
+    @apply flex justify-between items-center max-w-6xl mx-auto flex-wrap;
+}
+
+.social-links a {
+    @apply text-white mx-4 no-underline transition-colors duration-300;
+}
+
+.social-links a:hover {
+    @apply text-red-500;
+}
