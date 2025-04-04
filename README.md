@@ -155,7 +155,7 @@ Contributions are welcome! If you’d like to contribute to this project, please
 
 ## Contact
 For questions, suggestions, or feedback, feel free to reach out:
-- **Email**: your.email@example.com
+- **Email**: bravonorwa@gmail.com
 - **GitHub**: [Github/bravonokoth](#)
 
 ---
