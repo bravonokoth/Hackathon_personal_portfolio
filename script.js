@@ -20,7 +20,7 @@ document.querySelectorAll('.nav-item a').forEach(anchor => {
 document.getElementById('download-cv').addEventListener('click', () => {
     const link = document.createElement('a');
     link.href = 'cv.docx'; // Points to your .doc file
-    link.download = 'Brvon Stack Cv.docx';
+    link.download = 'Bravon Stack Cv.doc';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
