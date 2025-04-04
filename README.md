@@ -3,7 +3,6 @@
 A modern, responsive personal portfolio website showcasing my skills, projects, resume, and contact information. Built with HTML, Tailwind CSS, and JavaScript, this portfolio is designed to provide a professional online presence for developers, designers, or anyone looking to highlight their work.
 
 ## Table of Contents
-- [Demo](#demo)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Setup Instructions](#setup-instructions)
@@ -14,8 +13,6 @@ A modern, responsive personal portfolio website showcasing my skills, projects, 
 - [License](#license)
 - [Contact](#contact)
 
-## Demo
-You can view a live demo of the portfolio [here](#) (replace with the actual URL if hosted online, e.g., on GitHub Pages, Netlify, or Vercel).
 
 ## Features
 - **Responsive Design**: Fully responsive layout that works on desktops, tablets, and mobile devices.
@@ -99,6 +96,7 @@ Hackathon_personal_portfolio/
 ├── index.html         # Main HTML file containing the portfolio structure
 ├── style.css          # Project Style
 ├── script.js          # JavaScript file for interactivity (smooth scrolling, animations, CV download)
+├── profile image
 ├── cv.doc             # Placeholder for the downloadable CV file (replace with your actual CV)
 └── README.md          # Project documentation
 
