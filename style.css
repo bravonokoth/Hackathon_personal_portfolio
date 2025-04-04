@@ -12,7 +12,7 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Navigation Menu (Styled with Tailwind and Custom CSS) */
+/* Navigation Menu */
 .menu {
     @apply fixed top-4 left-1/2 transform -translate-x-1/2 flex rounded-md;
     background-image: linear-gradient(rgb(48, 48, 48) 13%, rgb(30, 30, 30) 40%, #0c0d11 86%);
